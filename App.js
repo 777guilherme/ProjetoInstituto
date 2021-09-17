@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/screens/Login'
 import Cadastro from './src/screens/Cadastro';
 import Home from './src/screens/Home'
+import EsqueceuSenha from './src/screens/EsqueceuSenha'
 
 const Menu = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
         <Menu.Screen name="Login" component={Login} />
         <Menu.Screen name="Cadastro" component={Cadastro} />
         <Menu.Screen name="Home" component={Home} />
+        <Menu.Screen name="EsqueceuSenha" component={EsqueceuSenha} />
       </Menu.Navigator>
     </NavigationContainer>
   )

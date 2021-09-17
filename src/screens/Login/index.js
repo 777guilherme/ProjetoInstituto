@@ -58,7 +58,7 @@ export default function Login({ navigation }) {
       </View>
       <View style={styles.Cadastrar}>
         <Text style={styles.texto3}>Esqueceu a senha?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Senha")}>
+        <TouchableOpacity onPress={() => navigation.navigate("EsqueceuSenha")}>
           <Text style={{ marginLeft: 5, color: "#FFF", fontWeight: "bold" }}>
             Clique aqui
           </Text>

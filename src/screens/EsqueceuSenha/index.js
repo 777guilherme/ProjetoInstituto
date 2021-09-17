@@ -11,7 +11,7 @@ import {
 
 import logo from "../../../src/assets/Logo.png";
 
-export default function Cadastro({ navigation }) {
+export default function EsqueceuSenha({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.containerDescricao}>
@@ -22,48 +22,34 @@ export default function Cadastro({ navigation }) {
         </View>
       </View>
       <View style={styles.welcome}>
-        <Text style={styles.texto}>Cadastre-se</Text>
+        <Text style={styles.texto}>Redefina sua senha.</Text>
+      </View>
+      <View  style={styles.welcome}>
+        <Text style={styles.texto1}>Enviaremos um email com mais informações para redefinição da sua senha.</Text>
       </View>
       <View style={styles.inputs}>
         <TextInput
-          style={styles.inputCPF}
-          placeholder=" Digite seu nome "
-          placeholderTextColor="#FFF"
-        />
-        <TextInput
-          style={styles.inputCPF}
-          placeholder=" Digite seu CPF "
-          placeholderTextColor="#FFF"
-        />
-        <TextInput
-          style={styles.inputCPF}
-          placeholder=" Digite seu telefone "
-          placeholderTextColor="#FFF"
-        />
-        <TextInput
-          style={styles.inputCPF}
+          style={styles.inputEmail}
           placeholder=" Digite seu Email "
           placeholderTextColor="#FFF"
         />
-        <TextInput
-          style={styles.inputCPF}
-          placeholder=" Digite sua senha "
-          placeholderTextColor="#FFF"
-        />
+        
       </View>
 
       <View style={styles.botaoCadastrar}>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <Text style={styles.textbotao}>Cadastrar</Text>
+          <Text style={styles.textbotao}>Enviar</Text>
         </TouchableOpacity>
       </View>
+      
       <View style={styles.botaoVoltar}>
         <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <Text style={styles.voltarLogin} >Voltar ao Login</Text>
         </TouchableOpacity>
       </View>
-      
     </SafeAreaView>
+
+    
   );
 }
 
@@ -97,6 +83,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  texto1:{
+    fontSize: 18,
+    color: '#FFF',
+    marginTop: 70,
+    textAlign: 'center'
+
+  },
   welcome: {
     marginLeft: 15,
   },
@@ -104,7 +97,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  inputCPF: {
+  inputEmail: {
     fontSize: 15,
     color: "#FFF",
     borderWidth: 1,
@@ -129,18 +122,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000000",
     fontSize: 17,
-  
   },
   botaoVoltar: {
-    fontSize: 30,
-    alignItems: 'center',
-    marginTop: 10,
-    color: '#FFF'
-},
+      fontSize: 30,
+      alignItems: 'center',
+      marginTop: 20,
+      color: '#FFF'
+  },
   voltarLogin: {
     color: '#FFF',
     fontSize: 15,
-    marginTop: 15
+    marginTop: 0
   }
-
+    
 });
