@@ -56,6 +56,14 @@ export default function Login({ navigation }) {
           </Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.Cadastrar}>
+        <Text style={styles.texto3}>Esqueceu a senha?</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Senha")}>
+          <Text style={{ marginLeft: 5, color: "#FFF", fontWeight: "bold" }}>
+            Clique aqui
+          </Text>
+        </TouchableOpacity>
+      </View>
 
       <View style={styles.botaoEntrar}>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -127,7 +135,7 @@ const styles = StyleSheet.create({
     
   },
   botaoEntrar: {
-    marginTop: 80,
+    marginTop: 35,
     backgroundColor: "#FFF",
     width: 270,
     height: 50,
@@ -144,7 +152,6 @@ const styles = StyleSheet.create({
       fontSize: 17
   },
   Cadastrar: {
-    marginTop: 10,
     marginRight: 30,
     justifyContent: "flex-end",
     flexDirection: "row",
