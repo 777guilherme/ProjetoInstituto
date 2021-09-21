@@ -8,7 +8,11 @@ import relogio from "../../../src/assets/relogio.png";
 import interrogacao from "../../../src/assets/interrogacao.png";
 import recicle from "../../../src/assets/recicle.png";
 
+<<<<<<< HEAD
 export default function Home({ navigation }) {
+=======
+export default function Home({navigation}) {
+>>>>>>> 5a610eb968793303a85154fd65fa217cbd956745
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
