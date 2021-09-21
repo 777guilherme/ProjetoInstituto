@@ -4,8 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './src/screens/Login'
 import Cadastro from './src/screens/Cadastro';
-import Home from './src/screens/Home'
-import EsqueceuSenha from './src/screens/EsqueceuSenha';
+import Home from './src/screens/Home';
+import EsqueceuSenha from '../ProjetoInstituto/src/screens/EsqueceuSenha';
 import Projetos from './src/screens/Projetos';
 import QuemSomos from './src/screens/QuemSomos';
 import Recursos from './src/screens/Recursos';
