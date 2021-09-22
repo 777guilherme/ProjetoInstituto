@@ -1,12 +1,19 @@
 import React from "react";
-import { StyleSheet, View, Image, Text, TouchableOpacity, TextInput, useState, CheckBox } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import {
+    StyleSheet,
+    View,
+    Image,
+    Text,
+    TouchableOpacity,
+    TextInput,
+    Switch,
+    useState
+} from 'react-native';
 
 import logo from "../../../src/assets/Logo.png";
 import home from "../../../src/assets/ICONE-CASA.png";
 
-export default function ({ navigation }) {
-
+export default function Tempo({ navigation }) {
     return (
 
         <View style={styles.container}>
@@ -40,6 +47,39 @@ export default function ({ navigation }) {
                 </View>
                 <View style={styles.selectArea}>
                     <Text style={styles.titulo4}>Como gostaria de atuar?</Text>
+                    <View style={styles.switchArea}>
+                        <Switch
+                            style={styles.switch}
+                        />
+                        <Text style={styles.switchTxt}>
+                            Montagem da Sacola do Bem - Onde: Brooklin | {"\n"}
+                            Quando: terceira sexta feira do mês {"\n"}
+                            - portas abertas
+                        </Text>
+                    </View>
+                    <View style={styles.switchArea}>
+                        <Switch
+                            style={styles.switch}
+                        />
+                        <Text style={styles.switchTxt}>
+                            Entrega da Sacola do Bem - Onde: Brooklin |  {"\n"}
+                            Quando: primeira sexta feira do mês
+                        </Text>
+                    </View>
+                    <View style={styles.switchArea}>
+                        <Switch
+                            style={styles.switch}
+                        />
+                        <Text style={styles.switchTxt}>
+                            Ligar para beneficiários dos projetos - {"\n"}
+                            Onde: de casa | Quando: última semana do mês
+                        </Text>
+                    </View>
+                    <View style={styles.botaoEntrar}>
+                        <TouchableOpacity>
+                            <Text style={styles.textbotao}>Enviar</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
             <View style={styles.container3}>
@@ -66,7 +106,7 @@ const styles = StyleSheet.create({
     container2: {
         flex: 1,
         backgroundColor: '#FFF',
-        marginTop: 30,
+        marginTop: 25,
     },
     container3: {
         height: 60,
@@ -83,7 +123,7 @@ const styles = StyleSheet.create({
         height: 43
     },
     titulo: {
-        fontSize: 35,
+        fontSize: 30,
         color: "black",
         fontWeight: 'bold'
     },
@@ -106,34 +146,52 @@ const styles = StyleSheet.create({
         marginLeft: 25
     },
     slogan2: {
-        marginTop: 27,
+        marginTop: 20,
         marginLeft: 25
     },
     inputArea: {
         justifyContent: 'center',
         alignItems: 'center',
         width: '95%',
-        marginTop: 20,
-        marginBottom: 10
+        marginTop: 15,
     },
     inputs: {
         fontSize: 15,
         borderWidth: 1,
         width: "89%",
-        height: 43,
+        height: 40,
         borderColor: '#DD0836',
         padding: 10,
         marginBottom: 17
     },
-    checkboxContainer: {
-        flexDirection: "row",
-        marginBottom: 20,
+    switchArea: {
+        marginTop: 20,
+        flexDirection: 'row',
+
     },
-    checkbox: {
-        alignSelf: "center",
+    switch: {
+        marginBottom: 8,
+        marginLeft: 20
     },
-    label: {
-        margin: 8,
+    switchTxt:{
+        fontSize: 13
+    },
+    textbotao: {
+        fontWeight: 'bold',
+        color: '#FFF',
+        fontSize: 17
+    },
+    botaoEntrar: {
+        marginTop: 23,
+        backgroundColor: "#6854AD",
+        width: 195,
+        height: 43,
+        justifyContent: "center",
+        alignItems: "center",
+        marginLeft: 90,
+        borderRadius: 20,
+        elevation: 4,
+        shadowColor: "#000",
     },
 })
 
