@@ -177,8 +177,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginLeft: 165,
     marginTop: 130,
-    width: 350,
-   
+    
   },
   textCard2: {
     textAlign: "center",
