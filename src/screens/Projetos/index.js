@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import logo from "../../../src/assets/Logo.png";
 import home from "../../../src/assets/ICONE-CASA.png";
-import img1 from "../../../src/assets/marmita.png";
+import img1 from "../../../src/assets/Sacola2.jpeg";
 import img2 from "../../../src/assets/Sacola.png";
 import img3 from "../../../src/assets/mascara.png";
 
@@ -22,13 +22,13 @@ export default function Projetos({ navigation }) {
         <View style={styles.card}>
           <View style={styles.bodyCard1}>
             <View style={styles.bodyCard2}>
-              <Text style={styles.tituloCard}>Marmita Noturna</Text>
+              <Text style={styles.tituloCard}>Sacola da Quebrada</Text>
             </View>
             <View style={styles.bodyCard4}>
               <Text style={styles.textCard1}>
-                A cada último sábado do mês, entregamos refeições, água, fruta,
-                chocolate e roupas para pessoas em situação de rua.
-                <Botao />
+                Todo segundo sábado do mês levamos para os residentes da Favela do Piolho, muitos
+                alimentos, roupas, kits de higiene, carinho e atenção.
+                <Botao onPress={() => navigation.navigate('SacolaDaQuebrada')} />
               </Text>
             </View>
             <Image source={img1} style={styles.imgEsquerda}></Image>
@@ -42,7 +42,7 @@ export default function Projetos({ navigation }) {
                 Na primeira terça-feira do mês, entregamos a Sacola do Bem à
                 famílias e pessoas carentes previamente cadastradas.
               </Text>
-              <Botao />
+              <Botao onPress={() => navigation.navigate("SacolaDoBem")} />
             </View>
             <Image source={img2} style={styles.imgDireita}></Image>
           </View>
@@ -56,7 +56,8 @@ export default function Projetos({ navigation }) {
               <Text style={styles.textCard1}>
                 Para ajudar na proteção contra o Covid-19, organizamos este
                 projeto que alia a confecção de máscaras laváveis.
-                <Botao />
+
+                <Botao onPress={() => navigation.navigate("Carroceiros")} />
               </Text>
             </View>
             <Image source={img3} style={styles.imgEsquerda}></Image>
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#EDEAEA",
     width: 390,
-    height: 168,
+    height: 175,
     marginHorizontal: 10,
     marginBottom: 6,
     borderRadius: 10,
@@ -174,8 +175,10 @@ const styles = StyleSheet.create({
   },
   textCard1: {
     textAlign: "center",
-    marginLeft: 180,
+    marginLeft: 165,
     marginTop: 130,
+    width: 350,
+   
   },
   textCard2: {
     textAlign: "center",

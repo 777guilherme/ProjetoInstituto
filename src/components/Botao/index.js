@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function Botao() {
+export default function Botao(props) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.botao}>
+      <TouchableOpacity onPress={props.onPress}  style={styles.botao}>
         <Text style={styles.texto}>Saiba Mais</Text>
       </TouchableOpacity>
     </View>
