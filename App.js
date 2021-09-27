@@ -10,6 +10,9 @@ import Projetos from './src/screens/Projetos';
 import QuemSomos from './src/screens/QuemSomos';
 import Recursos from './src/screens/Recursos';
 import Tempo from './src/screens/Tempo';
+import SacolaDaQuebrada from './src/screens/SacolaDaQuebrada';
+import SacolaDoBem from './src/screens/SacolaDoBem';
+import Carroceiros from  './src/screens/Carroceiros';
 
 const Menu = createStackNavigator();
 
@@ -32,6 +35,12 @@ export default function App() {
         <Menu.Screen name="QuemSomos" component={QuemSomos} />
         <Menu.Screen name="Recursos" component={Recursos} />
         <Menu.Screen name="Tempo" component={Tempo} />
+        
+        <Menu.Screen name="SacolaDoBem" component={SacolaDoBem} />
+        <Menu.Screen name="SacolaDaQuebrada" component={SacolaDaQuebrada} />
+        <Menu.Screen name="Carroceiros" component={Carroceiros} />
+        
+        
 
       </Menu.Navigator>
     </NavigationContainer>
