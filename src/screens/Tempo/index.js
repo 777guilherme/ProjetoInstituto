@@ -7,7 +7,7 @@ import {
     TouchableOpacity,
     TextInput,
     Switch,
-    useState
+    SafeAreaView
 } from 'react-native';
 
 import logo from "../../../src/assets/Logo.png";
@@ -15,82 +15,80 @@ import home from "../../../src/assets/ICONE-CASA.png";
 
 export default function Tempo({ navigation }) {
     return (
-
-        <View style={styles.container}>
-            <View style={styles.container1}>
-                <Image source={logo} style={styles.logo} />
-            </View>
-            <View style={styles.container2}>
-                <View style={styles.slogan}>
-                    <Text style={styles.titulo}>Doe Tempo</Text>
-                    <Text style={styles.titulo2}>Venha ser um de nossos voluntários</Text>
+        <SafeAreaView style={styles.container}>
+                <View style={styles.container1}>
+                    <Image source={logo} style={styles.logo} />
                 </View>
-                <View style={styles.slogan2}>
-                    <Text style={styles.titulo3}>REGISTRE-SE:</Text>
-                </View>
-                <View style={styles.inputArea}>
-                    <TextInput
-                        style={styles.inputs}
-                        placeholder="Digite seu nome completo"
-                        placeholderTextColor="#B9B9B9"
-                    />
-                    <TextInput
-                        style={styles.inputs}
-                        placeholder="Digite seu telefone"
-                        placeholderTextColor="#B9B9B9"
-                    />
-                    <TextInput
-                        style={styles.inputs}
-                        placeholder="Digite seu e-mail"
-                        placeholderTextColor="#B9B9B9"
-                    />
-                </View>
-                <View style={styles.selectArea}>
-                    <Text style={styles.titulo4}>Como gostaria de atuar?</Text>
-                    <View style={styles.switchArea}>
-                        <Switch
-                            style={styles.switch}
+                <View style={styles.container2}>
+                    <View style={styles.slogan}>
+                        <Text style={styles.titulo}>Doe Tempo</Text>
+                        <Text style={styles.titulo2}>Venha ser um de nossos voluntários</Text>
+                    </View>
+                    <View style={styles.slogan2}>
+                        <Text style={styles.titulo3}>REGISTRE-SE:</Text>
+                    </View>
+                    <View style={styles.inputArea}>
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Digite seu nome completo"
+                            placeholderTextColor="#B9B9B9"
                         />
-                        <Text style={styles.switchTxt}>
-                            Montagem da Sacola do Bem - Onde: Brooklin | {"\n"}
-                            Quando: terceira sexta feira do mês {"\n"}
-                            - portas abertas
-                        </Text>
-                    </View>
-                    <View style={styles.switchArea}>
-                        <Switch
-                            style={styles.switch}
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Digite seu telefone"
+                            placeholderTextColor="#B9B9B9"
                         />
-                        <Text style={styles.switchTxt}>
-                            Entrega da Sacola do Bem - Onde: Brooklin |  {"\n"}
-                            Quando: primeira sexta feira do mês
-                        </Text>
-                    </View>
-                    <View style={styles.switchArea}>
-                        <Switch
-                            style={styles.switch}
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Digite seu e-mail"
+                            placeholderTextColor="#B9B9B9"
                         />
-                        <Text style={styles.switchTxt}>
-                            Ligar para beneficiários dos projetos - {"\n"}
-                            Onde: de casa | Quando: última semana do mês
-                        </Text>
                     </View>
-                    <View style={styles.botaoEntrar}>
-                        <TouchableOpacity>
-                            <Text style={styles.textbotao}>Enviar</Text>
-                        </TouchableOpacity>
+                    <View style={styles.selectArea}>
+                        <Text style={styles.titulo4}>Como gostaria de atuar?</Text>
+                        <View style={styles.switchArea}>
+                            <Switch
+                                style={styles.switch}
+                            />
+                            <Text style={styles.switchTxt}>
+                                Montagem da Sacola do Bem - Onde: Brooklin | {"\n"}
+                                Quando: terceira sexta feira do mês {"\n"}
+                                - portas abertas
+                            </Text>
+                        </View>
+                        <View style={styles.switchArea}>
+                            <Switch
+                                style={styles.switch}
+                            />
+                            <Text style={styles.switchTxt}>
+                                Entrega da Sacola do Bem - Onde: Brooklin |  {"\n"}
+                                Quando: primeira sexta feira do mês
+                            </Text>
+                        </View>
+                        <View style={styles.switchArea}>
+                            <Switch
+                                style={styles.switch}
+                            />
+                            <Text style={styles.switchTxt}>
+                                Ligar para beneficiários dos projetos - {"\n"}
+                                Onde: de casa | Quando: última semana do mês
+                            </Text>
+                        </View>
+                        <View style={styles.botaoEntrar}>
+                            <TouchableOpacity>
+                                <Text style={styles.textbotao}>Enviar</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </View>
-            </View>
-            <View style={styles.container3}>
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                    <Image source={home} style={styles.home} />
-                </TouchableOpacity>
-            </View>
-        </View>
+                <View style={styles.container3}>
+                    <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+                        <Image source={home} style={styles.home} />
+                    </TouchableOpacity>
+                </View>
+        </SafeAreaView>
     )
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -173,7 +171,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         marginLeft: 20
     },
-    switchTxt:{
+    switchTxt: {
         fontSize: 13
     },
     textbotao: {

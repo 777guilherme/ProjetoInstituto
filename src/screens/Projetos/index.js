@@ -42,7 +42,8 @@ export default function Projetos({ navigation }) {
                 Na primeira terça-feira do mês, entregamos a Sacola do Bem à
                 famílias e pessoas carentes previamente cadastradas.
               </Text>
-              <Botao />
+              <Botao
+              />
             </View>
             <Image source={img2} style={styles.imgDireita}></Image>
           </View>

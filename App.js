@@ -32,7 +32,7 @@ export default function App() {
         <Menu.Screen name="QuemSomos" component={QuemSomos} />
         <Menu.Screen name="Recursos" component={Recursos} />
         <Menu.Screen name="Tempo" component={Tempo} />
-        
+
       </Menu.Navigator>
     </NavigationContainer>
   )
