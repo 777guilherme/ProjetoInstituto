@@ -10,7 +10,7 @@ import {
 import logo from "../../../src/assets/Logo.png";
 import home from "../../../src/assets/ICONE-CASA.png";
 
-export default function Tempo({ navigation }) {
+export default function SacolaDoBem({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
                 <View style={styles.container1}>
@@ -52,15 +52,4 @@ const styles = StyleSheet.create({
     }
 })
 
-import React from 'react';
-import { View, Text} from 'react-native';
 
-export default function SacolaDoBem() {
-    return(
-        <View>
-            <Text>
-                Sacola do Bem
-            </Text>
-        </View>
-    )
-}

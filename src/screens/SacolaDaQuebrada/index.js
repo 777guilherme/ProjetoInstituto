@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text} from 'react-native';
 
-export default function SacolaDaQuebrada() {
+export default function SacolaDaQuebrada({ navigation }) {
     return(
         <View>
             <Text>
